@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* colors */
+
+$white: #FFFFFF;
+$blue: #2AA8E1;
+$yellow: #F7BA1D;
+$gray: #7E8B97;
+$black-800: #443F3F;
+$black-900: #18181B;
+
+/* fonts */
+
+$font-family: 'Inter', Arial, sans-serif;
+
+$fw-regular: 500;
+$fw-medium: 600;
+$fw-bold: 700;
+$fw-black: 800;
+
+$fs-50: 0.833rem;
+$fs-100: 1rem;
+
+/* CSS RESET */
+
+*, 
+*::before, 
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    font: inherit;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    line-height: 1.5;
+
+    /* improve text rendering */
+    -webkit-font-smoothing: antialiased;
+
+    font-family: $font-family;
+}
+
+/* set media defaults */
+img, 
+picture, 
+video, 
+canvas, 
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* avoids text overflow */
+p, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+
+    font: inherit;
+    color: inherit;
+
+    transition: 0.3s all ease-in-out;
+}
+
+/* ****** */
+/* LAYOUT */
+/* ****** */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1.5em;
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        span {
+            max-width: 150px;
+
+            font-size: $fs-50;
+            font-weight: $fw-medium;
+        }
+    }
+}
