@@ -23,6 +23,11 @@ $fs-100: 1rem;
 
 /* CSS RESET */
 
+html {
+    scroll-behavior: smooth;
+    font-size: 14px;
+}
+
 *, 
 *::before, 
 *::after {
@@ -31,10 +36,6 @@ $fs-100: 1rem;
     box-sizing: border-box;
     
     font: inherit;
-}
-
-html {
-    font-size: 14px;
 }
 
 body {
@@ -100,6 +101,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1em 1.5em;
+
     div {
         display: flex;
         flex-direction: column;
@@ -111,5 +113,88 @@ header {
             font-size: $fs-50;
             font-weight: $fw-medium;
         }
+    }
+
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 999;
+
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5em;
+
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        
+        color: $white; 
+        
+        .x-menu {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 42px 15px 0 0;
+        }
+    }
+    
+    .hide-on-mobile {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+
+// for desktop screens
+@media (min-width: 600px) {
+    header {
+        div {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 1em;
+
+            span {
+                margin-top: 5px;
+            }
+        }
+
+        .desktop-nav {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            gap: 2em;
+    
+            .hide-on-mobile {
+                display: block;
+            }
+    
+            .mobile-menu {
+                display: none;
+            }
+        }
+    }
+}
+
+// animations
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-1000px);
+    } 100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slide-out-top {
+    0% {
+        transform: translateY(0px);
+    } 100% {
+        transform: translateY(-1000px);
     }
 }

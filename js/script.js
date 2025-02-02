@@ -1,4 +1,9 @@
-const navMenu = document.getElementById('nav-menu');
-const hamburgerMenu = document.getElementById('hamburger-menu');
-const xMenu = document.getElementById('xmenu');
+function showMobileNav() {
+    const mobileNav = document.querySelector('.mobile-nav');
+    mobileNav.style.display = 'flex';
+}
 
+function hideMobileNav() {
+    const mobileNav = document.querySelector('.mobile-nav');
+    mobileNav.style.display = 'none';
+}
