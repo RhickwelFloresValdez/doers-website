@@ -107,6 +107,10 @@ header {
         flex-direction: column;
         gap: 0.5em;
 
+        .logo {
+            width: 120px;
+        }
+
         span {
             max-width: 150px;
 
@@ -182,6 +186,13 @@ header {
 }
 
 // animations
+.slide-in-top {
+    animation: slide-in-top 500ms ease;
+}
+
+.slide-out-top {
+    animation: slide-out-top 500ms
+}
 
 @keyframes slide-in-top {
     0% {

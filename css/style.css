@@ -80,6 +80,9 @@ header div {
   flex-direction: column;
   gap: 0.5em;
 }
+header div .logo {
+  width: 120px;
+}
 header div span {
   max-width: 150px;
   font-size: 0.833rem;
@@ -138,6 +141,14 @@ header .mobile-menu {
     display: none;
   }
 }
+.slide-in-top {
+  animation: slide-in-top 500ms ease;
+}
+
+.slide-out-top {
+  animation: slide-out-top 500ms;
+}
+
 @keyframes slide-in-top {
   0% {
     transform: translateY(-1000px);
