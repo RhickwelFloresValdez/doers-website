@@ -69,13 +69,23 @@ a {
   transition: 0.3s all ease-in-out;
 }
 
+button {
+  background: none;
+  border: none;
+}
+
 /* ****** */
 /* LAYOUT */
 /* ****** */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #FFFFFF;
   padding: 1em 1.5em;
 }
 header div {
@@ -121,13 +131,9 @@ header .mobile-menu {
   display: block;
 }
 
-.banner {
-  min-width: 100%;
-  max-height: 450px;
-  -o-object-fit: cover;
-     object-fit: cover;
+main {
+  margin-top: 120px;
 }
-
 main .intro-section {
   display: flex;
   flex-direction: column;
@@ -150,6 +156,18 @@ main .about-section p {
 }
 main .about-section p span {
   font-weight: 700;
+}
+
+.banner {
+  min-width: 100%;
+  max-height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
 
 @media (min-width: 770px) {
