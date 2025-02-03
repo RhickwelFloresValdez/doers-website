@@ -4,8 +4,9 @@
 
 $white: #FFFFFF;
 $blue: #2AA8E1;
+$light-blue: #6DC0E7;
 $yellow: #F7BA1D;
-$gray: #7E8B97;
+$gray: #515960;
 $black-800: #443F3F;
 $black-900: #18181B;
 
@@ -20,6 +21,7 @@ $fw-black: 800;
 
 $fs-50: 0.833rem;
 $fs-100: 1rem;
+$fs-600: 2.074rem;
 
 /* CSS RESET */
 
@@ -57,7 +59,6 @@ svg {
     max-width: 100%;
 }
 
-/* avoids text overflow */
 p, 
 h1, 
 h2, 
@@ -68,13 +69,17 @@ h6 {
     overflow-wrap: break-word;
 }
 
-/* improve line wrapping */
 p {
     text-wrap: pretty;
 }
 
 h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
+}
+
+h2 {
+    font-weight: $fw-bold;
+    font-size: $fs-600;
 }
 
 ul {
@@ -142,7 +147,7 @@ header {
             position: absolute;
             top: 0;
             right: 0;
-            margin: 42px 15px 0 0;
+            margin: 35px 15px 0 0;
         }
     }
     
@@ -154,16 +159,72 @@ header {
     }
 }
 
+.banner {
+    min-width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+main {
+    .intro-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        
+        background: linear-gradient(to bottom, $blue 50%, $light-blue);
+        text-align: center;
+        padding: 3em;
+    
+        color: $white;
+    }
+
+    .about-section {
+        h2 {
+            padding: 1em;
+            text-align: center;
+
+            color: $yellow;
+        }
+        p {
+            padding: 3.5em;
+            color: $gray;
+
+            span {
+                font-weight: $fw-bold;
+            }
+        }
+    }
+}
+
 // for desktop screens
-@media (min-width: 600px) {
+@media (min-width: 770px) {
+    html {
+        font-size: 16px;
+    }
+
+    header,
+    main 
+    {
+        max-width: 2560px;
+        margin: auto;
+    }
+
     header {
+        padding: 1.5em 2.5em;
         div {
             flex-direction: row;
             justify-content: center;
             align-items: center;
             gap: 1em;
 
+            .logo {
+                width: 150px;
+            }
+
             span {
+                font-size: $fs-100;
                 margin-top: 5px;
             }
         }
@@ -180,6 +241,16 @@ header {
     
             .mobile-menu {
                 display: none;
+            }
+        }
+    }
+
+    main {
+        .intro-section {
+            padding: 10em 0;
+    
+            p {
+                max-width: 750px;
             }
         }
     }
