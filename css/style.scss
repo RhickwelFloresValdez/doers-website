@@ -184,7 +184,7 @@ main {
         
         background: linear-gradient(to bottom, $blue 50%, $light-blue);
         text-align: center;
-        padding: 3em;
+        padding: 2.5em;
     
         color: $white;
     }
@@ -197,11 +197,42 @@ main {
             color: $yellow;
         }
         p {
-            padding: 3.5em;
+            padding: 2.5em;
             color: $gray;
 
             span {
                 font-weight: $fw-bold;
+            }
+        }
+    }
+
+    .turtle-keychain-section {
+        img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5em;
+
+            background: linear-gradient(to bottom, $blue 50%, $light-blue);
+            text-align: center;
+            padding: 2.5em;
+
+            color: $white;
+
+            a {
+                background-color: $white;
+                border-radius: 100px;
+                padding: 0.8em 2em;
+
+                color: $blue;
+                font-weight: $fw-medium;
             }
         }
     }
@@ -278,6 +309,19 @@ main {
             p {
                 margin: auto;
                 max-width: 1000px;
+            }
+        }
+
+        .turtle-keychain-section {
+            display: grid;
+            grid-template-columns: 1fr 60%;
+            min-height: 10vh;
+            img {
+                aspect-ratio: 3 / 4;
+            }
+
+            div p {
+                max-width: 550px;
             }
         }
     }

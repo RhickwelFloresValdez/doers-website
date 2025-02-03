@@ -142,7 +142,7 @@ main .intro-section {
   gap: 1em;
   background: linear-gradient(to bottom, #2AA8E1 50%, #6DC0E7);
   text-align: center;
-  padding: 3em;
+  padding: 2.5em;
   color: #FFFFFF;
 }
 main .about-section h2 {
@@ -151,11 +151,35 @@ main .about-section h2 {
   color: #F7BA1D;
 }
 main .about-section p {
-  padding: 3.5em;
+  padding: 2.5em;
   color: #515960;
 }
 main .about-section p span {
   font-weight: 700;
+}
+main .turtle-keychain-section img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .turtle-keychain-section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  background: linear-gradient(to bottom, #2AA8E1 50%, #6DC0E7);
+  text-align: center;
+  padding: 2.5em;
+  color: #FFFFFF;
+}
+main .turtle-keychain-section div a {
+  background-color: #FFFFFF;
+  border-radius: 100px;
+  padding: 0.8em 2em;
+  color: #2AA8E1;
+  font-weight: 600;
 }
 
 .banner {
@@ -216,6 +240,17 @@ main .about-section p span {
   main .about-section p {
     margin: auto;
     max-width: 1000px;
+  }
+  main .turtle-keychain-section {
+    display: grid;
+    grid-template-columns: 1fr 60%;
+    min-height: 10vh;
+  }
+  main .turtle-keychain-section img {
+    aspect-ratio: 3/4;
+  }
+  main .turtle-keychain-section div p {
+    max-width: 550px;
   }
 }
 .slide-in-top {
