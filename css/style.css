@@ -158,7 +158,7 @@ main .about-section p span {
   }
   header,
   main {
-    max-width: 2560px;
+    max-width: 2000px;
     margin: auto;
   }
   header {
@@ -194,6 +194,10 @@ main .about-section p span {
   }
   main .intro-section p {
     max-width: 750px;
+  }
+  main .about-section p {
+    margin: auto;
+    max-width: 1000px;
   }
 }
 .slide-in-top {

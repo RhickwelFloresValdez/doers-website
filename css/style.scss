@@ -207,7 +207,7 @@ main {
     header,
     main 
     {
-        max-width: 2560px;
+        max-width: 2000px;
         margin: auto;
     }
 
@@ -251,6 +251,13 @@ main {
     
             p {
                 max-width: 750px;
+            }
+        }
+
+        .about-section {
+            p {
+                margin: auto;
+                max-width: 1000px;
             }
         }
     }
