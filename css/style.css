@@ -87,6 +87,7 @@ header {
   align-items: center;
   background-color: #FFFFFF;
   padding: 1em 1.5em;
+  color: #443F3F;
 }
 header div {
   display: flex;
@@ -187,6 +188,8 @@ main .turtle-keychain-section div a {
   max-height: 450px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .no-scroll {
@@ -196,7 +199,7 @@ main .turtle-keychain-section div a {
 
 @media (min-width: 770px) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
   header,
   main {
@@ -210,7 +213,7 @@ main .turtle-keychain-section div a {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: 1.5em;
   }
   header div .logo {
     width: 150px;
@@ -218,6 +221,7 @@ main .turtle-keychain-section div a {
   header div span {
     font-size: 1rem;
     margin-top: 5px;
+    max-width: 170px;
   }
   header .desktop-nav {
     display: flex;
@@ -235,7 +239,7 @@ main .turtle-keychain-section div a {
     padding: 10em 0;
   }
   main .intro-section p {
-    max-width: 750px;
+    max-width: 800px;
   }
   main .about-section p {
     margin: auto;
@@ -243,14 +247,15 @@ main .turtle-keychain-section div a {
   }
   main .turtle-keychain-section {
     display: grid;
-    grid-template-columns: 1fr 60%;
-    min-height: 10vh;
+    grid-template-columns: 600px 1fr;
   }
   main .turtle-keychain-section img {
-    aspect-ratio: 3/4;
+    height: 700px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   main .turtle-keychain-section div p {
-    max-width: 550px;
+    max-width: 600px;
   }
 }
 .slide-in-top {
