@@ -15,3 +15,25 @@ function hideMobileNav() {
         document.body.classList.remove('no-scroll');
     }, { once: true });
 }
+
+// handles video autoplay upon scroll
+
+document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("autoPlayVideo");
+
+    function handleScroll() {
+        const rect = video.getBoundingClientRect();
+        const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
+
+        if (inViewport && video.paused) {
+            video.play();
+        } else if (!inViewport && !video.paused) {
+            video.pause();
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Run once on page load
+});
+
+  
