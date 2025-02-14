@@ -1,3 +1,14 @@
+fetch("../utils/navigation.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+      })
+      .catch(error => console.error("Error loading navbar:", error));
+
+
+// for controlling the popping up of navigation bar upon pressing the
+// hamburger menu in mobile screens
+
 function showMobileNav() {
     const mobileNav = document.querySelector('.mobile-nav');
     mobileNav.style.display = 'flex';
