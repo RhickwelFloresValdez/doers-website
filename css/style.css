@@ -147,10 +147,10 @@ main .hero-section {
   align-items: start;
   aspect-ratio: 1/1;
   background-image: url("../assets/images/covers/what it is to be a volunteer.jpg");
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 2.5em;
+  padding: 3em;
   color: #FFFFFF;
 }
 main .hero-section div a {
@@ -184,30 +184,6 @@ main .about-section p {
 main .about-section p span {
   font-weight: 700;
 }
-main .turtle-keychain-section img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main .turtle-keychain-section div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5em;
-  background: linear-gradient(to bottom, #2AA8E1 50%, #6DC0E7);
-  text-align: center;
-  padding: 2.5em;
-  color: #FFFFFF;
-}
-main .turtle-keychain-section div a {
-  background-color: #FFFFFF;
-  border-radius: 100px;
-  padding: 0.8em 2em;
-  color: #2AA8E1;
-  font-weight: 600;
-}
 
 .banner {
   min-width: 100%;
@@ -225,7 +201,7 @@ main .turtle-keychain-section div a {
 
 @media (min-width: 770px) {
   html {
-    font-size: 18px;
+    font-size: 19px;
   }
   header,
   main {
@@ -264,10 +240,13 @@ main .turtle-keychain-section div a {
   main .hero-section {
     aspect-ratio: auto;
     min-height: 90vh;
-    padding: 2em 4em;
+    padding: 4em;
+  }
+  main .hero-section h2 {
+    font-size: 5em;
   }
   main .hero-section div {
-    max-width: 500px;
+    max-width: 900px;
   }
   main .intro-section {
     padding: 10em 0;
@@ -278,18 +257,6 @@ main .turtle-keychain-section div a {
   main .about-section p {
     margin: auto;
     max-width: 1000px;
-  }
-  main .turtle-keychain-section {
-    display: grid;
-    grid-template-columns: 600px 1fr;
-  }
-  main .turtle-keychain-section img {
-    height: 700px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  main .turtle-keychain-section div p {
-    max-width: 600px;
   }
 }
 .slide-in-top {

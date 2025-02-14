@@ -191,10 +191,10 @@ main {
 
         aspect-ratio: 1 / 1;
         background-image: url('../assets/images/covers/what it is to be a volunteer.jpg');
-        background-position: center;
+        background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 2.5em;
+        padding: 3em;
 
         color: $white;
 
@@ -241,37 +241,6 @@ main {
             }
         }
     }
-
-    .turtle-keychain-section {
-        img {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-        }
-
-        div {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5em;
-
-            background: linear-gradient(to bottom, $blue 50%, $light-blue);
-            text-align: center;
-            padding: 2.5em;
-
-            color: $white;
-
-            a {
-                background-color: $white;
-                border-radius: 100px;
-                padding: 0.8em 2em;
-
-                color: $blue;
-                font-weight: $fw-medium;
-            }
-        }
-    }
 }
 
 .banner {
@@ -289,7 +258,7 @@ main {
 // for desktop screens
 @media (min-width: 770px) {
     html {
-        font-size: 18px;
+        font-size: 19px;
     }
 
     header,
@@ -338,10 +307,14 @@ main {
         .hero-section {
             aspect-ratio: auto;
             min-height: 90vh;
-            padding: 2em 4em;
+            padding: 4em;
+
+            h2 {
+                font-size: 5em;
+            }
 
             div {
-                max-width: 500px;
+                max-width: 900px;
             }
         }
 
@@ -357,20 +330,6 @@ main {
             p {
                 margin: auto;
                 max-width: 1000px;
-            }
-        }
-
-        .turtle-keychain-section {
-            display: grid;
-            grid-template-columns: 600px 1fr;
-
-            img {
-                height: 700px;
-                object-fit: cover;
-            }
-
-            div p {
-                max-width: 600px;
             }
         }
     }
