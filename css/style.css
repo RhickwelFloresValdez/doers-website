@@ -179,10 +179,19 @@ main .about-section h2 {
 }
 main .about-section p {
   padding: 2.5em;
-  color: #515960;
+  color: #7E8B97;
 }
 main .about-section p span {
   font-weight: 700;
+}
+
+#primary-footer {
+  background-color: #2AA8E1;
+  padding: 2em 3em;
+  color: #FFFFFF;
+}
+#primary-footer .footer-menu li h3 {
+  font-size: 2rem;
 }
 
 .banner {
@@ -204,7 +213,8 @@ main .about-section p span {
     font-size: 19px;
   }
   header,
-  main {
+  main,
+  footer {
     max-width: 2000px;
     margin: auto;
   }
@@ -257,6 +267,10 @@ main .about-section p span {
   main .about-section p {
     margin: auto;
     max-width: 1000px;
+  }
+  #primary-footer .footer-menu {
+    display: grid;
+    grid-template-columns: 10% 10% 1;
   }
 }
 .slide-in-top {
