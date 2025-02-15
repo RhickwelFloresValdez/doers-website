@@ -1,16 +1,16 @@
 fetch('utils/navigation.html')
       .then(response => response.text())
       .then(data => {
-        document.getElementById('navigation').innerHTML = data;
+        document.getElementById('top-navigation').innerHTML = data;
       })
       .catch(error => console.error('Error loading navbar:', error));
 
-fetch('utils/main_footer.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('primary-footer').innerHTML = data;
-      })
-      .catch(error =>console.error('Error loading main footer:', error));
+// fetch('utils/main_footer.html')
+//       .then(response => response.text())
+//       .then(data => {
+//         document.getElementById('primary-footer').innerHTML = data;
+//       })
+//       .catch(error =>console.error('Error loading main footer:', error));
 
 
 // for controlling the popping up of navigation bar upon pressing the

@@ -112,7 +112,7 @@ button {
 /* LAYOUT */
 /* ****** */
 
-header {
+#top-navigationr {
     position: fixed;
     top: 0;
     left: 0;
@@ -274,7 +274,7 @@ main {
         font-size: 19px;
     }
 
-    header,
+    #top-navigation,
     main,
     footer
     {
@@ -282,7 +282,7 @@ main {
         margin: auto;
     }
 
-    header {
+    #top-navigation {
         padding: 1.5em 2.5em;
         div {
             flex-direction: row;
