@@ -1,4 +1,4 @@
-fetch('utils/_navigation.html')
+fetch('utils/navigation.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('navigation').innerHTML = data;
