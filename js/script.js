@@ -5,7 +5,7 @@ fetch('utils/navigation.html')
       })
       .catch(error => console.error('Error loading navbar:', error));
 
-fetch('../utils/_main_footer.html')
+fetch('utils/main_footer.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('primary-footer').innerHTML = data;
