@@ -80,12 +80,3 @@ button {
     background: none;
     border: none;
 }
-
-@include media-desktop {
-    #top-navigation,
-    main
-    {
-        max-width: 2000px;
-        margin: auto;
-    }
-}

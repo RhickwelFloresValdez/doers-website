@@ -1,0 +1,20 @@
+@include media-desktop {
+    #top-navigation,
+    main
+    {
+        max-width: 2000px;
+        margin: auto;
+    }
+}
+
+.banner {
+    min-width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
