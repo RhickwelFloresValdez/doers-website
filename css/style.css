@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 /* colors */
 /* fonts */
-/* CSS RESET */
+/* SET TO DEFAULTS */
 html {
   scroll-behavior: smooth;
   font-size: 14px;
@@ -81,59 +81,68 @@ button {
 /* ****** */
 /* LAYOUT */
 /* ****** */
-header {
+#top-navigation {
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
+  bottom: none;
+  left: 0;
+  bottom: none;
+  z-index: 999;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: none;
   background-color: #FFFFFF;
   border-bottom: 1px solid #C0D0CF;
   padding: 1em 1.5em;
   color: #443F3F;
 }
-header div {
+#top-navigation div {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 0.5em;
 }
-header div .logo {
+#top-navigation div .logo {
   width: 120px;
 }
-header div span {
+#top-navigation div span {
   max-width: 150px;
   font-size: 0.833rem;
   font-weight: 600;
 }
-header .mobile-nav {
-  position: fixed;
+#top-navigation .mobile-nav {
+  position: 0;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  bottom: 0;
   z-index: 999;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.5em;
+  display: none;
   background-color: rgba(0, 0, 0, 0.5);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   color: #FFFFFF;
 }
-header .mobile-nav .x-menu {
+#top-navigation .mobile-nav .x-menu {
   position: absolute;
   top: 0;
   right: 0;
   margin: 35px 15px 0 0;
 }
-header .hide-on-mobile {
+#top-navigation .hide-on-mobile {
   display: none;
 }
-header .mobile-menu {
+#top-navigation .mobile-menu {
   display: block;
 }
 
@@ -145,6 +154,7 @@ main .hero-section {
   flex-direction: column;
   justify-content: end;
   align-items: start;
+  gap: none;
   aspect-ratio: 1/1;
   background-image: url("../assets/images/covers/what it is to be a volunteer.jpg");
   background-position: bottom;
@@ -212,39 +222,41 @@ main .about-section p span {
   html {
     font-size: 19px;
   }
-  header,
+  #top-navigation,
   main,
   footer {
     max-width: 2000px;
     margin: auto;
   }
-  header {
+  #top-navigation {
     padding: 1.5em 2.5em;
   }
-  header div {
+  #top-navigation div {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 1.5em;
   }
-  header div .logo {
+  #top-navigation div .logo {
     width: 150px;
   }
-  header div span {
+  #top-navigation div span {
     font-size: 1rem;
     margin-top: 5px;
     max-width: 170px;
   }
-  header .desktop-nav {
+  #top-navigation .desktop-nav {
     display: flex;
-    justify-content: left;
+    flex-direction: row;
+    justify-content: right;
     align-items: center;
     gap: 2em;
   }
-  header .desktop-nav .hide-on-mobile {
+  #top-navigation .desktop-nav .hide-on-mobile {
     display: block;
   }
-  header .desktop-nav .mobile-menu {
+  #top-navigation .desktop-nav .mobile-menu {
     display: none;
   }
   main .hero-section {

@@ -25,7 +25,7 @@ $fs-100: 1rem;
 $fs-400: 2rem;
 $fs-500: 2.7rem;
 
-/* CSS RESET */
+/* SET TO DEFAULTS */
 
 html {
     scroll-behavior: smooth;
@@ -108,19 +108,33 @@ button {
     scroll-margin-top: 100px;
 }
 
+// mixins
+
+@mixin flexbox($direction, $justify, $align, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin position($position, $top, $right, $bottom, $left, $z-index) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    bottom: $bottom;
+    z-index: $z-index;
+}
+
 /* ****** */
 /* LAYOUT */
 /* ****** */
 
-#top-navigationr {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#top-navigation  {
+    @include position(fixed, 0, 0, none, 0, 999);
+    @include flexbox(row, space-between, center, none);
 
     background-color: $white;
     border-bottom: 1px solid $gray-100;
@@ -129,9 +143,7 @@ button {
     color: $black-800;
 
     div {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5em;
+        @include flexbox(column, center, center, 0.5em);
 
         .logo {
             width: 120px;
@@ -146,18 +158,9 @@ button {
     }
 
     .mobile-nav {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 999;
-
+        @include position(0, 0, 0, 0, 0, 999);
+        @include flexbox(column, center, center, 1.5em);
         display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1.5em;
 
         background-color: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(5px);
@@ -185,10 +188,7 @@ main {
     padding-top: 110px;
 
     .hero-section {
-        display: flex;
-        flex-direction: column;
-        justify-content: end;
-        align-items: start;
+        @include flexbox(column, end, start, none);
 
         aspect-ratio: 1 / 1;
         background-image: url('../assets/images/covers/what it is to be a volunteer.jpg');
@@ -213,11 +213,7 @@ main {
     }
 
     .intro-section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1em;
+        @include flexbox(column, center, center, 1em);
         
         background: linear-gradient(to bottom, $blue 50%, $light-blue);
         text-align: center;
@@ -284,11 +280,9 @@ main {
 
     #top-navigation {
         padding: 1.5em 2.5em;
+
         div {
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5em;
+            @include flexbox(row, center, center, 1.5em);
 
             .logo {
                 width: 150px;
@@ -302,10 +296,7 @@ main {
         }
 
         .desktop-nav {
-            display: flex;
-            justify-content: left;
-            align-items: center;
-            gap: 2em;
+            @include flexbox(row, right, center, 2em);
     
             .hide-on-mobile {
                 display: block;
