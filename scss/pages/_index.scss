@@ -1,12 +1,4 @@
-@import 'abstract/variables', 'abstract/mixins', 'abstract/animations', 'base/default', 'layout/header', 'layout/layout';
-
-.about-section {
-    scroll-margin-top: 100px;
-}
-
-// ******
-// LAYOUT
-// ******
+@import '../abstract/variables', '../abstract/mixins', '../abstract/animations', '../base/default', '../layout/header', '../layout/layout';
 
 main {
     padding-top: 110px;
@@ -15,7 +7,7 @@ main {
         @include flexbox(column, end, start);
 
         aspect-ratio: 1 / 1;
-        background-image: url('../assets/images/covers/what it is to be a volunteer.jpg');
+        background-image: url('../../assets/images/covers/what_it_is_to_be_a_volunteer.jpg');
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;

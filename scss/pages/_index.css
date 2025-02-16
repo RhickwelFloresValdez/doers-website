@@ -240,7 +240,7 @@ main .hero-section {
   justify-content: end;
   align-items: start;
   aspect-ratio: 1/1;
-  background-image: url("../assets/images/covers/what it is to be a volunteer.jpg");
+  background-image: url("../../assets/images/covers/what_it_is_to_be_a_volunteer.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -306,4 +306,4 @@ main .about-section p {
 }
 main .about-section p span {
   font-weight: 700;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=index.css.map */
