@@ -1,0 +1,27 @@
+@import 'variables';
+
+@mixin flexbox($direction, $justify, $align, $gap: null) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+
+    @if $gap != null {
+        gap: $gap;
+    }
+}
+
+@mixin position($position, $top, $right, $bottom, $left, $z-index) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $z-index;
+}
+
+@mixin media-desktop {
+    @media (min-width: $desktop-viewport) {
+        @content;
+    }
+}

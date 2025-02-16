@@ -1,0 +1,85 @@
+@import '../abstract/variables', '../abstract/mixins';
+
+#top-navigation  {
+    @include position(fixed, 0, 0, none, 0, 999);
+    @include flexbox(row, space-between, center);
+
+    background-color: $white;
+    border-bottom: 1px solid $gray-100;
+    padding: 1em 1.5em;
+
+    @include media-desktop{
+        padding: 1.5em 2.5em;
+    }
+
+    color: $black-800;
+
+    div {
+        @include flexbox(column, center, center, 0.5em);
+
+        @include media-desktop {
+            @include flexbox(row, center, center, 1.5em);
+        }
+
+        .logo {
+            width: 120px;
+
+            @include media-desktop {
+                width: 150px;
+            }
+        }
+
+        span {
+            max-width: 150px;
+
+            font-size: $fs-50;
+            font-weight: $fw-medium;
+
+            @include media-desktop {
+                font-size: $fs-100;
+                margin-top: 5px;
+                max-width: 170px;
+            }
+        }
+    }
+
+    .mobile-nav {
+        @include position(fixed, 0, 0, 0, 0, 999);
+        @include flexbox(column, center, center, 1.5em);
+        display: none;
+
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        
+        color: $white; 
+        
+        .x-menu {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            margin: 35px 15px 0 0;
+        }
+    }
+    
+    .hide-on-mobile {
+        display: none;
+    }
+    .mobile-menu {
+        display: block;
+    }
+
+    @include media-desktop {
+        .desktop-nav {
+            @include flexbox(row, right, center, 2em);
+    
+            .hide-on-mobile {
+                display: block;
+            }
+    
+            .mobile-menu {
+                display: none;
+            }
+        }
+    }
+}

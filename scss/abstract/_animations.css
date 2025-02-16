@@ -1,0 +1,24 @@
+.slide-in-top {
+  animation: slide-in-top 500ms ease;
+}
+
+.slide-out-top {
+  animation: slide-out-top 500ms;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes slide-out-top {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
+}/*# sourceMappingURL=animations.css.map */
